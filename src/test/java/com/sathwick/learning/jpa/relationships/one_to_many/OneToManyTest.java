@@ -46,7 +46,7 @@ class OneToManyTest {
         /*
             Error:
             org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role:
-                com.sathwick.learning.jpa.relationships.one_to_many.domain.Customer.numbers:
+                com.sathwick.learning.jpa.relationships.one_to_many.domain.Customer2.numbers:
                 could not initialize proxy - no Session
          */
         /*
@@ -56,14 +56,14 @@ class OneToManyTest {
                 it by using the fetch type attribute.
 
                 In our use case
-                Customer Class
+                Customer2 Class
                     List<PhoneNumber> phoneNumbers;
                         if we are fetching lazily then
                             > When we load customer obbject, phoneNumbers will be empty
                             > When we call getNumbers() on customer object, it will load phoneNumbers on demand
 
 
-             To fix above error -> we can change fetch type to EAGER in Customer Class
+             To fix above error -> we can change fetch type to EAGER in Customer2 Class
          */
         Customer customer = optionalCustomer.get();
         System.out.println(customer);

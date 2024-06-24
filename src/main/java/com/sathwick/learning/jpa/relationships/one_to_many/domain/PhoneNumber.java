@@ -19,7 +19,7 @@ public class PhoneNumber {
     // ManyToOne Associations
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    // tell's hibernate which column in phone number table should be associated with Customer table
+    // tell's hibernate which column in phone number table should be associated with Customer2 table
     private Customer customer;
 
     @Override
