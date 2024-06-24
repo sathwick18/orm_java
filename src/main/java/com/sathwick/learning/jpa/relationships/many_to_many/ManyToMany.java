@@ -4,19 +4,19 @@ package com.sathwick.learning.jpa.relationships.many_to_many;
 /*
     Example:
                 ---->
-       Patient          Doctor
+       Patient2          Doctor
                 <----
             A patient can have multiple doctors and a doctor can have many patients.
        Programmer <------> Project
             A programmer can work on many projects and a project can have many programmers.
 
-      In case of Patient and Doctor
-              Patient 1 -----> * Doctor
-              Patient * -----> 1 Doctor
-      Patient Class
+      In case of Patient2 and Doctor
+              Patient2 1 -----> * Doctor
+              Patient2 * -----> 1 Doctor
+      Patient2 Class
         List<Doctor> doctors;
       Doctor Class
-        List<Patient> patients;
+        List<Patient2> patients;
 
       In Database we should have 3 tables
         Patience(id, fname, lname)

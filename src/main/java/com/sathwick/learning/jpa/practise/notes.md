@@ -26,7 +26,7 @@
 ```
 use user;
 
-create table patient(
+create table patient2(
     id int primary key,
     first_name varchar(20),
     last_name varchar(20),
@@ -45,7 +45,7 @@ create table doctor(
 create table patients_doctors(
     patient_id int,
     doctor_id int,
-    foreign key(patient_id) references patient(id),
+    foreign key(patient_id) references patient2(id),
     foreign key(doctor_id) references doctor(id)
 );
 
@@ -57,7 +57,7 @@ create table appointment(
     started tinyint(1),
     ended tinyint(1),
     reason varchar(200),
-    foreign key(patient_id) references patient(id),
+    foreign key(patient_id) references patient2(id),
     foreign key(doctor_id) references doctor(id)
 );
 ```
